@@ -72,6 +72,10 @@ EOF
 `curl -s localhost:26657/status | jq .result | jq .sync_info`  
 !!! WAIT FOR - `catching_up: false` (means node is completely synced) !!!
 
+Check balance:  
+`cohod query bank balances <account_address> --chain-id darkmatter-1`  
+!!! IF amount is not null create validator. Othervise find some token from other validators. !!!  
+
 ```
 cohod tx staking create-validator \
   --amount=1000000ucoho \
