@@ -93,5 +93,8 @@ cohod tx staking create-validator \
 # Withdraw delegator rewards  
 `cohod tx distribution withdraw-rewards <validator_address> --commission --from <key_name> --gas auto --fees=0ucoho --chain-id darkmatter-1 -y`  
 
+# Check balance  
+`cohod query bank balances <account_address> --chain-id darkmatter-1 | awk '/amount:/ {print}' | tr -cd [:digit:]`
+
 # Delegate to a validator  
 `cohod tx staking delegate <validator_address> ${compounding_coin}ucoho --chain-id darkmatter-1 --gas auto --fees=0ucoho --from <key_name> --yes`  
