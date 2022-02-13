@@ -99,3 +99,6 @@ cohod tx staking create-validator \
 
 # Delegate to a validator  
 `cohod tx staking delegate <validator_address> ${compounding_coin}ucoho --chain-id darkmatter-1 --gas auto --fees=0ucoho --from <key_name> --yes`  
+
+# Send coho to another account address  
+`cohod tx bank send <key_name> <account_address> <amount>000000ucoho --fees=0ucoho --chain-id darkmatter-1`
