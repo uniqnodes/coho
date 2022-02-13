@@ -86,6 +86,7 @@ cohod tx staking create-validator \
   --commission-max-rate="0.20" \
   --commission-max-change-rate="0.01" \
   --min-self-delegation="1" \
+  --gas-adjustment 1.5 \
   --gas="auto" \
   --from=<key_name>
 ```
