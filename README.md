@@ -12,14 +12,14 @@ https://github.com/erknfe/go-lang
 
 # Initiate CoHo Instance  
 `cd ~`  
-`cohod init <your-moniker> --chain-id darkmatter-1`  
+`cohod init <your_moniker> --chain-id darkmatter-1`  
 
 # Create or Import Validator Key  
 Create  
-`cohod keys add <your validator-key-name>`  
+`cohod keys add <your_validator_key_name>`  
 
 Import  
-`cohod keys add <your validator-key-name> --recover`  
+`cohod keys add <your_validator_key_name> --recover`  
 
 # Download the genesis file  
 `curl -s https://raw.githubusercontent.com/cosmic-horizon/testnets/main/darkmatter-1/genesis.json > $HOME/.coho/config/genesis.json`  
@@ -94,7 +94,10 @@ cohod tx staking create-validator \
 `cohod query bank balances <account_address> --chain-id darkmatter-1 | awk '/amount:/ {print}' | tr -cd [:digit:]`
 
 # Delegate to a validator  
-`cohod tx staking delegate <validator_address> ${compounding_coin}ucoho --chain-id darkmatter-1 --gas auto --fees=0ucoho --from <key_name> --yes`  
+`cohod tx staking delegate <validator_address> <amount>ucoho --chain-id darkmatter-1 --gas auto --fees=0ucoho --from <key_name> --yes`  
+
+# Redelegate  
+`cohod tx staking redelegate <from_validator_address> <to_validator_address> <amount>ucoho --from <key_name> --gas auto --fees=0ucoho --chain-id darkmatter-1`  
 
 # Send coho to another account address  
-`cohod tx bank send <key_name> <account_address> <amount>000000ucoho --fees=0ucoho --chain-id darkmatter-1`
+`cohod tx bank send <key_name> <account_address> <amount>ucoho --fees=0ucoho --chain-id darkmatter-1`
