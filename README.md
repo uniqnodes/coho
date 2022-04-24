@@ -35,7 +35,7 @@ minimum-gas-prices = "0ucoho"
 `sudo nano .coho/config/config.toml`  
 
 ```
-seeds = ""
+seeds = "a06e58e39d4a471d00d2e5d58233089c64fa5bb8@149.28.70.87:26657"
 persistent_peers = ""
 ```  
 
