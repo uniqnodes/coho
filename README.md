@@ -7,7 +7,7 @@ https://github.com/erknfe/go-lang
 `git checkout v3.1.0`  
 `make install`  
 
-# Initiate CoHo Instance  
+# Initiate Qwoyn Instance  
 `cd ~`  
 `qwoynd init <moniker> --chain-id higgs-boson-3`  
 
@@ -89,5 +89,5 @@ qwoynd tx staking create-validator \
 # Redelegate  
 `qwoynd tx staking redelegate <from_validator_address> <to_validator_address> <amount>uqwoyn --from <key_name> --gas auto --fees=1000uqwoyn --chain-id higgs-boson-3`  
 
-# Send coho to another account address  
+# Send qwoyn to another account address  
 `qwoynd tx bank send <key_name> <account_address> <amount>uqwoyn --fees=1000uqwoyn --chain-id higgs-boson-3`
