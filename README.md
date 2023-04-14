@@ -52,16 +52,17 @@ EOF
 `sudo systemctl restart qwoynd`  
 `journalctl -u qwoynd -f`  
 
-# Create Validator  
+# Check sync status  
 `curl -s localhost:26657/status | jq .result | jq .sync_info`  
 !!! WAIT FOR - `catching_up: false` (means node is completely synced) !!!
 
-# Get faucet
+# Get faucet  
 `curl -X POST -d '{"address": "ENTER-YOUR-QWOYN-ADDRESS"}' http://45.32.76.26:8000`
 
 # Check balance:  
 `qwoynd query bank balances <account_address> --chain-id higgs-boson-3`  
 
+# Create Validator  
 ```
 qwoynd tx staking create-validator \
   --amount=<qwoyn_amount> \
